@@ -25,17 +25,6 @@ npm install
 
 ---
 
-## ⚙️ Environment Setup
-
-Create a `.env` file in the root:
-
-```env
-PORT=3000
-DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.mongodb.net/vadtal?retryWrites=true&w=majority"
-```
-
-> Never commit `.env`. Use `.env.example` to document required keys.
-
 ---
 
 ## 🔧 Prisma Setup

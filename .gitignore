@@ -1,0 +1,34 @@
+node_modules
+# Keep environment variables out of version control
+.env
+node_modules/
+/generated/prisma
+
+/generated/prisma
+/dist
+# Ignore build artifacts
+/dist
+
+# Ignore logs
+logs
+*.log
+
+# Ignore coverage reports
+
+coverage
+# Ignore temporary files
+
+tmp
+temp
+# Ignore IDE specific files
+.vscode
+.idea
+# Ignore OS generated files
+.DS_Store
+
+
+# Ignore build artifacts
+/dist
+# Ignore test output
+/test-output
+# Ignore npm debug logs

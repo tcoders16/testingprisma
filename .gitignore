@@ -31,4 +31,4 @@ temp
 /dist
 # Ignore test output
 /test-output
-# Ignore npm debug logs
+# Ignore npm debug logsa

@@ -129,7 +129,7 @@ npm start
 
 ## 👨‍💻 About the Developer
 
-# 🧠 Omkumar Solanki
+#  Omkumar Solanki
 **AI Software Engineer** | **Agentic Workflow & RAG Chatbot Architect**  
 **Full Stack Developer (MERN)** | **iOS Developer (SwiftUI + Storyboard)**  
 

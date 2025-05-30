@@ -125,30 +125,36 @@ npm start
 ```
 
 
-```md
-👨‍💻 Designed and Developed by Omkumar Solanki  
-AI Software Engineer | Agentic Workflow & RAG Chatbot Architect  
-Full Stack Developer (MERN) | iOS Developer (SwiftUI + Storyboard)  
+---
 
-Languages & Frameworks:  
-TypeScript • JavaScript • Swift • Java • Python • C++ • SQL • PL/SQL • Shell  
+## 👨‍💻 About the Developer
 
-Databases & ORMs:  
-MongoDB • PostgreSQL • MySQL • Redis • Prisma • Mongoose • Firebase Firestore  
+**🧠 Omkumar Solanki**  
+**AI Software Engineer** | **Agentic Workflow & RAG Chatbot Architect**  
+**Full Stack Developer (MERN)** | **iOS Developer (SwiftUI + Storyboard)**  
 
-AI & LLM Ecosystem:  
-OpenAI GPT-4o • LangChain • Pinecone • ChromaDB • RAG • Vector Embeddings  
-LLM Function Calling • Prompt Engineering • AI Agents  
+---
 
-Backend & DevOps Tools:  
-Node.js • Express.js • Docker • GitHub Actions • REST APIs • WebSockets  
+### 🧩 Languages & Frameworks  
+- **TypeScript**, **JavaScript**, **Swift**, **Java**, **Python**, **C++**, **SQL**, **PL/SQL**, **Shell**
 
-Cloud & Infrastructure:  
-AWS EC2 • S3 • CloudWatch • MongoDB Atlas • Railway • Render • Vercel  
+### 🗃️ Databases & ORMs  
+- **MongoDB**, **PostgreSQL**, **MySQL**, **Redis**, **Prisma**, **Mongoose**, **Firebase Firestore**
 
-Version Control & Testing:  
-Git • GitHub • Postman • Jest • Thunder Client • Swagger
-```
+### 🤖 AI & LLM Ecosystem  
+- **OpenAI GPT-4o**, **LangChain**, **Pinecone**, **ChromaDB**, **RAG**, **Vector Embeddings**  
+- **LLM Function Calling**, **Prompt Engineering**, **AI Agents**
+
+### 🛠️ Backend & DevOps Tools  
+- **Node.js**, **Express.js**, **Docker**, **GitHub Actions**, **REST APIs**, **WebSockets**
+
+### ☁️ Cloud & Infrastructure  
+- **AWS EC2**, **S3**, **CloudWatch**, **MongoDB Atlas**, **Railway**, **Render**, **Vercel**
+
+### 🔍 Version Control & Testing  
+- **Git**, **GitHub**, **Postman**, **Jest**, **Thunder Client**, **Swagger**
+
+---
 
 ---
 

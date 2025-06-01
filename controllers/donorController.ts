@@ -2,15 +2,11 @@
 import { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 
-
-
-
 // Initialize Prisma Client
 const prisma = new PrismaClient();
 
 
 //creating a new donar
-
 export const createDonor = async (
   req: Request, 
   res: Response) => {
@@ -26,6 +22,7 @@ export const createDonor = async (
   }
 };
 
+// Get all donors
 export const getAllDonors = async (req: Request, res: Response) => {
   try {
     const donors = await prisma.donor.findMany();
@@ -76,8 +73,6 @@ export const updateDonor = async (req: Request, res: Response) => {
   };
 
 };
-
-
 
 
   // Delete a donor

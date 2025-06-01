@@ -14,6 +14,8 @@ const router = Router();
  * @desc    Create a new donation linked to a donor
  * @access  Public
  */
+
+// Create a new donation
 router.post("/", createDonation);
 
 /**
@@ -21,11 +23,19 @@ router.post("/", createDonation);
  * @desc    Get all donations made by a specific donor
  * @access  Public
  */
+
+
+// Get donations by donor ID
 router.get(
   "/:donorId",
   getDonationsByDonor as (req: Request, res: Response, next: NextFunction) => any
 );
+
+
+
+// Get donations by donor ID
 router.get("/:donorId", getDonationsByDonor);
+
 
 // Export the router to be used in server.ts
 export default router;

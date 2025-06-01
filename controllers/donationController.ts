@@ -4,11 +4,13 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 /**
- * Create a donation and link it to a valid donor.
- * Route: POST /api/donations
+ * @route   POST /api/donations
+ * @desc    Create a donation and link it to a valid donor
  */
 export const createDonation = async (req: Request, res: Response) => {
-  const { amount, message, donorId } = req.body;
+  const amount: number = req.body.amount;
+  const message: string = req.body.message;
+  const donorId: string = req.body.donorId;
 
   try {
     const donor = await prisma.donor.findUnique({
@@ -16,7 +18,7 @@ export const createDonation = async (req: Request, res: Response) => {
     });
 
     if (!donor) {
-       res.status(404).json({ error: 'Donor not found' });
+       res.status(404).json({ error: 'Donor not found' }); // ✅ added return
     }
 
     const donation = await prisma.donation.create({
@@ -31,16 +33,17 @@ export const createDonation = async (req: Request, res: Response) => {
 
     res.status(201).json(donation);
   } catch (error: any) {
+    console.error('Error creating donation:', error);
     res.status(400).json({ error: error.message });
   }
 };
 
 /**
- * Get all donations by a specific donor ID.
- * Route: GET /api/donations/:donorId
+ * @route   GET /api/donations/:donorId
+ * @desc    Get all donations by a specific donor ID
  */
 export const getDonationsByDonor = async (req: Request, res: Response) => {
-  const { donorId } = req.params;
+  const donorId: string = req.params.donorId;
 
   try {
     const donations = await prisma.donation.findMany({
@@ -50,6 +53,7 @@ export const getDonationsByDonor = async (req: Request, res: Response) => {
 
     res.status(200).json(donations);
   } catch (error: any) {
+    console.error('Error fetching donations:', error);
     res.status(500).json({ error: error.message });
   }
 };

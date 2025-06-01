@@ -1,7 +1,15 @@
+// controllers/donorController.ts
 import { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 
+
+
+
+// Initialize Prisma Client
 const prisma = new PrismaClient();
+
+
+//creating a new donar
 
 export const createDonor = async (
   req: Request, 
@@ -29,7 +37,6 @@ export const getAllDonors = async (req: Request, res: Response) => {
 
 
 // Get a specific donor by ID
-
 export const getDonorById = async (req: Request, res: Response) => {
   const { donorId } = req.params;
 
@@ -48,5 +55,45 @@ export const getDonorById = async (req: Request, res: Response) => {
     res.status(500).json({ error: error.message });
     console.error('Error fetching donor:', error);
   }
+};
+
+
+
+// Update a donor's information
+export const updateDonor = async (req: Request, res: Response) => {
+  const { donorId } = req.params;
+  const { name, email, phone, address } = req.body;
+
+  try {
+    const updatedDonor = await prisma.donor.update({
+      where: { id: donorId },
+      data: { name, email, phone, address },
+    });
+    res.status(200).json(updatedDonor);
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+    console.error('Error updating donor:', error);
+  };
 
 };
+
+
+
+
+  // Delete a donor
+  export const deleteDonor = async (req: Request, res: Response) => {
+  const { donorId } = req.params;
+
+  try {
+    await prisma.donor.delete({
+      where: { id: donorId },
+    });
+    res.status(200).json({ message: 'Donor deleted successfully' });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+    console.error('Error deleting donor:', error);
+  }
+};
+
+
+

@@ -37,3 +37,14 @@ model Donation {
   donorId    String   @db.ObjectId
   donor      Donor    @relation(fields: [donorId], references: [id])
 }
+
+
+
+
+ // --------------------------------------------------------------------------------------------------------------------------------------------
+
+ model Admin {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  email    String @unique
+  password String  // Store hashed passwords
+}
